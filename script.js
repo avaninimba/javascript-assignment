@@ -6,11 +6,11 @@ var numberOfAddedProducts = 0;
 fetch("./products.json")
 .then(function(response) {
     return response.json();
-})
+}
 .then(function(products) {
     listOfProducts = products;
     createUIFromLoadedProducts();
-});
+}
 /** Uses the loaded products data to create a visible product list on the website */
 function createUIFromLoadedProducts() {
     /* Check your console to see that the products are stored in the listOfProducts varible */
