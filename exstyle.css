@@ -10,19 +10,25 @@ body {
 
 .flex-container {
 		display: flex;
-		flex-direction:column;
-		flex-wrap: nowrap;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
-		width: 300px;
-		top:100px;
+		justify-content: center;
+		align-content: center;
+		flex-wrap:wrap;
+		width: 100%;
 	}
 
 .flex-item {
+		display: flex;
 		background-color: cornflowerblue;
-		width: 350px;
+		width: 50%;
 		height: 500px;
-		margin: 10px;
+		flex-grow: 1;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+	
 	}
 
 

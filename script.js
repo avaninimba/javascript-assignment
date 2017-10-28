@@ -1,12 +1,6 @@
 /* GLOBAL VARIABLES */
 
-var index = 0;
-var aSingleProduct = listOfProducts[index];
-var title = aSingleProduct.title;
-
-console.log(title);
-
-var listOfProducts;
+var myList = document.querySelector('ul');
 // add more global variables when needed..
 
 
@@ -16,8 +10,14 @@ fetch("./products.json")
     return response.json();
 })
 .then(function(products) {
-    listOfProducts = products;
-    createUIFromLoadedProducts();
+    for(var i = 0; i < json.products.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '<strong>' + json.products[i].title + '</strong>';
+        listItem.innerHTML +=' can be found in ' + json.products[i].description + '.';
+        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].image + '</strong>';
+        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].price + '</strong>';
+        myList.appendChild(listItem);
+    }     
 });
 
 /** Uses the loaded products data to create a visible product list on the website */
