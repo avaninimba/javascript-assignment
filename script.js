@@ -37,10 +37,7 @@ function createUIFromLoadedProducts() {
     
     main.appendChild (h2Element)
     
-    
-    function additemtocart(){
-
-    }
+  
     
     
     
