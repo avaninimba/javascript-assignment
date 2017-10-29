@@ -15,11 +15,14 @@ body {
 		justify-content: center;
 		align-content: center;
 		flex-wrap:wrap;
+		
 		width: 100%;
 	}
 
 .flex-item {
-		display: flex;
+		
+		flex-direction: column;
+		display: flex; 
 		background-color: cornflowerblue;
 		width: 50%;
 		height: 500px;
@@ -31,7 +34,9 @@ body {
 	
 	}
 
-
+.main{
+	top: 100px;
+}
 
 #meny {
 position: fixed;
