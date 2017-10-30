@@ -19,15 +19,19 @@ function createUIFromLoadedProducts() {
     var ulElement = document.createElement("ul")
     var liElement = document.createElement("li")
     var h2Element = document.createElement("h2")
+    var imgProductsElement = document.createElement("imgProducts")
     
         h2Element.innerText = listOfProducts[i].title;
         main.appendChild (h2Element)
-        
-        liElement.innerText = listOfProducts[i].price;
-        main.appendChild (liElement)
 
         ulElement.innerText = listOfProducts[i].description;
         main.appendChild (ulElement)
+
+        imgProductsElement.innerText = listOfProducts[i].image;
+        main.appendChild (imgProductsElement)
+
+        liElement.innerText = listOfProducts[i].price;
+        main.appendChild (liElement)
         
         var buttonElement = document.createElement("button")
         buttonElement.innerText = "Lägg till i varukorgen"
