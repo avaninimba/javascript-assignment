@@ -27,7 +27,7 @@ body {
 		display: flex; 
 		flex: 1 1 0;
 		background-color: white;
-		max-width: 400px;
+		width: 800px;
 		height: 500px;
 		text-align: center;
 		align-items: center;
@@ -36,25 +36,26 @@ body {
 	}
 
 .main {
-	top: 10%;
+	flex-basis: 80px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-wrap:wrap;
-	
+	flex-wrap: wrap;
 	width: 100%;
 }
 
 h2 {
 	background-color: white;
-	
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	flex-grow: 1;
 }
 
 ul {
 	background-color: white;
-	
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	flex-grow: 1; 
 }
@@ -63,13 +64,14 @@ li {
 	background-color: white;
 	
 	text-align: center;
+	align-items: center;
+	justify-content: center;
 	flex-grow: 1;
 }
 
 
 button {
 	background-color: #4093E0;
-	flex: 1 1 0;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
