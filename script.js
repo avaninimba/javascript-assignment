@@ -21,21 +21,31 @@ function createUIFromLoadedProducts() {
     var h2Element = document.createElement("h2")
     for(var i = 0; i < listOfProducts.length; i++) {
         h2Element.innerText = listOfProducts[i].title;
+        liElement.innerText = listOfProducts[i].price;
+        ulElement.innerText = listOfProducts[i].description;
+
         var buttonElement = document.createElement("button")
         buttonElement.innerText = "Lägg till i varukorgen"
         buttonElement.onclick = function() {
         numberOfAddedProducts += 1
         console.log(numberOfAddedProducts)
     }
-    }
+    
+    main.appendChild (h2Element)
+    main.appendChild (liElement)
+    main.appendChild (ulElement)
+    main.appendChild (buttonElement)
+}
     
    /* ulElement.appendChild(liElement)
    /* liElement.appendChild(h2Element)
    /* liElement.appendChild(buttonElement)*/
     
     
+   
     
-    main.appendChild (h2Element)
+    
+    
     
   
     
