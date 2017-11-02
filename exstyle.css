@@ -39,7 +39,6 @@ body {
 	}
 
 .main {
-	flex-basis: 80px;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
@@ -60,10 +59,11 @@ h2 {
 	text-align: center;
 }
 
-.imgProducts
+imgProducts
 {
 	width: 300px;
 	margin: auto;
+
 	
 }
 
