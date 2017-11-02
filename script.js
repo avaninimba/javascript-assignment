@@ -3,6 +3,7 @@ var listOfProducts;
 var numberOfAddedProducts = 0;
 // add more global variables when needed..
 /* Get products from the json file and store it in a javascript variable */
+
 fetch("./products.json")
 .then(function(response) {
     return response.json();
@@ -15,12 +16,12 @@ fetch("./products.json")
 function createUIFromLoadedProducts() {
     /* Check your console to see that the products are stored in the listOfProducts varible */
     var main = document.getElementById("main")
-    
+
     for(var i = 0; i < listOfProducts.length; i++) {
         var ulElement = document.createElement("ul")
         var liElement = document.createElement("li")
         var h2Element = document.createElement("h2")
-        var imgProductsElement = document.getElementById("imgProducts")
+		var imageElement = document.createElement("img")
     
         h2Element.innerText = listOfProducts[i].title;
         main.appendChild (h2Element)
@@ -28,9 +29,8 @@ function createUIFromLoadedProducts() {
         ulElement.innerText = listOfProducts[i].description;
         main.appendChild (ulElement)
 
-        imgProductsElement.src = "assets/" + listOfProducts[i].image;
-        main.appendChild (imgProductsElement)
-        console.log(imgProductsElement)
+        imageElement.src = "assets/" + listOfProducts[i].image;
+        main.appendChild (imageElement)
 
         liElement.innerText = listOfProducts[i].price + "kr";
         main.appendChild (liElement)
