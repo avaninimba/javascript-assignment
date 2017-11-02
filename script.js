@@ -14,12 +14,13 @@ fetch("./products.json")
 /** Uses the loaded products data to create a visible product list on the website */
 function createUIFromLoadedProducts() {
     /* Check your console to see that the products are stored in the listOfProducts varible */
-    for(var i = 0; i < listOfProducts.length; i++) {
     var main = document.getElementById("main")
-    var ulElement = document.createElement("ul")
-    var liElement = document.createElement("li")
-    var h2Element = document.createElement("h2")
-    var imgProductsElement = document.createElement("imgProducts")
+    
+    for(var i = 0; i < listOfProducts.length; i++) {
+        var ulElement = document.createElement("ul")
+        var liElement = document.createElement("li")
+        var h2Element = document.createElement("h2")
+        var imgProductsElement = document.getElementById("imgProducts")
     
         h2Element.innerText = listOfProducts[i].title;
         main.appendChild (h2Element)
@@ -27,10 +28,11 @@ function createUIFromLoadedProducts() {
         ulElement.innerText = listOfProducts[i].description;
         main.appendChild (ulElement)
 
-        imgProductsElement.innerText = listOfProducts[i].image;
+        imgProductsElement.src = "assets/" + listOfProducts[i].image;
         main.appendChild (imgProductsElement)
+        console.log(imgProductsElement)
 
-        liElement.innerText = listOfProducts[i].price;
+        liElement.innerText = listOfProducts[i].price + "kr";
         main.appendChild (liElement)
         
         var buttonElement = document.createElement("button")
@@ -39,12 +41,11 @@ function createUIFromLoadedProducts() {
         numberOfAddedProducts += 1
         console.log(numberOfAddedProducts)
         
+        }
+    
+        main.appendChild (buttonElement)
     }
-    
-    console.log(listOfProducts);
-    
-    main.appendChild (buttonElement)
-}
+
     
     /*  ulElement.appendChild(liElement)
    liElement.appendChild(h2Element)
