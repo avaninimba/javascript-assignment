@@ -32,17 +32,19 @@ function createUIFromLoadedProducts() {
         imageElement.src = "assets/" + listOfProducts[i].image;
         main.appendChild (imageElement)
 
-        liElement.innerText = listOfProducts[i].price + "kr";
+        liElement.innerText = listOfProducts[i].price + " "+ "kr";
         main.appendChild (liElement)
+        
         
 		var countBasket = document.createElement("span")
         var buttonElement = document.createElement("button")
         buttonElement.innerText = "Lägg till i varukorgen"
-        buttonElement.onclick = function() {
-        numberOfAddedProducts += 1;
-        var counter = document.getElementById("count");
-        counter.innerText = numberOfAddedProducts;
-        }
+        buttonElement.onclick = function() 
+            {
+            numberOfAddedProducts += 1;
+            var counter = document.getElementById("count");
+            counter.innerText = numberOfAddedProducts;
+            }
     
         main.appendChild (buttonElement)
     }
